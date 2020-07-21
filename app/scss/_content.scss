@@ -8,7 +8,8 @@
 }
 
 .sidebar {
-  padding: 60px 20px 160px 20px;
+  position: relative;
+  padding: 60px 20px 200px 20px;
   background-color: #f4f6f8;
   border-right: 1px solid #f1f1f1;
   width: 200px;
@@ -17,8 +18,8 @@
     margin-bottom: 28px;
 
     &::before {
-      color: #7C7C7C;
-      opacity: .7;
+      color: #7c7c7c;
+      opacity: 0.7;
     }
   }
   &__folders-list {
@@ -76,7 +77,9 @@
   }
   &__folder-text {
   }
-  &__button {
+  &__add-folder-btn {
+    border: none;
+    background-color: transparent;
     color: #767676;
   }
 }
@@ -100,13 +103,13 @@
       position: absolute;
       left: 180px;
       font-size: 20px;
-      color: #DFDFDF;
+      color: #dfdfdf;
       top: 12px;
     }
   }
   &__list {
-    font-family: Lato;
-    font-style: normal;
+    font-family: 'Lato';
+    // font-style: normal;
     font-weight: 500;
     font-size: 16px;
   }
@@ -118,11 +121,11 @@
       position: absolute;
       right: 0;
       top: 0;
-      color: #E3E3E3;
+      color: #e3e3e3;
       opacity: 0;
     }
 
-    &:hover  {
+    &:hover {
       &::before {
         opacity: 1;
       }
@@ -151,8 +154,8 @@
     }
     /* стили для чекбокса, находящегося в состоянии checked */
     &:checked + label::before {
-      border-color: #4DD599;
-      background-color: #4DD599;
+      border-color: #4dd599;
+      background-color: #4dd599;
       // background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
     }
     /* стили для чекбокса, находящегося в состоянии disabled */
@@ -180,7 +183,129 @@
     }
   }
 
-  &__add-btn {
+  &__add-task-btn {
     color: #767676;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+.sidebar-form {
+  position: absolute;
+  font-family: Lato;
+  width: 235px;
+  bottom: 20px;
+  left: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  z-index: 2;
+
+  &__input {
+    display: block;
+    padding: 8px 11px;
+    color: #c7c7c7;
+    border-radius: 4px;
+    border: 1px solid #efefef;
+    margin-bottom: 15px;
+  }
+
+  &__add-btn {
+    display: block;
+    width: 100%;
+    background: #4dd599;
+    border-radius: 4px;
+    border: none;
+    padding: 11px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #5c5c5c;
+    color: #fff;
+    cursor: pointer;
+
+    &::before {
+      margin-left: 0;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+    }
+  }
+}
+
+.badge-list {
+  margin-bottom: 16px;
+
+  &__item {
+    display: inline-block;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+    &:hover {
+      border: 2px solid #525252;
+    }
+
+    &_grey {
+      background-color: #c9d1d3;
+    }
+    &_green {
+      background-color: #42b883;
+    }
+    &_blue {
+      background-color: #64c4ed;
+    }
+    &_pink {
+      background-color: #ffbbcc;
+    }
+    &_lime {
+      background-color: #b6e6bd;
+    }
+    &_purple {
+      background-color: #c355f5;
+    }
+    &_black {
+      background-color: #110133;
+    }
+    &_red {
+      background-color: #ff6464;
+    }
+  }
+}
+
+.tasks-form {
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #efefef;
+    margin-bottom: 15px;
+  }
+
+  &__add-btn {
+    background-color: #4dd599;
+    border-radius: 4px;
+    border: none;
+    padding: 11px 20px;
+    color: #fff;
+  }
+  
+  &__cancel-btn {
+    background-color: #f4f6f8;
+    border-radius: 4px;
+    border: none;
+    padding: 11px 20px;
+    color: #9c9c9c;
   }
 }

@@ -23,7 +23,29 @@
         <span class="sidebar__folder-text">Личное</span>
       </div>
     </div>
-    <div class="sidebar__button icon-plus">Добавить папку</div>
+    <button class="sidebar__add-folder-btn icon-plus">Добавить папку</button>
+
+    <div class="sidebar-form">
+      <form class="sidebar-form__form" action="">
+        <input
+          class="sidebar-form__input"
+          type="text"
+          placeholder="Название папки"
+        />
+        <div class="badge-list">
+          <span class="badge-list__item badge-list__item_grey"></span>
+          <span class="badge-list__item badge-list__item_green"></span>
+          <span class="badge-list__item badge-list__item_blue"></span>
+          <span class="badge-list__item badge-list__item_pink"></span>
+          <span class="badge-list__item badge-list__item_lime"></span>
+          <span class="badge-list__item badge-list__item_purple"></span>
+          <span class="badge-list__item badge-list__item_black"></span>
+          <span class="badge-list__item badge-list__item_red"></span>
+        </div>
+        <button class="sidebar-form__add-btn">Добавить</button>
+      </form>
+      <button class="sidebar-form__close-btn icon-cancel"></button>
+    </div>
   </div>
   <div class="tasks">
     <h1 class="tasks__title icon-pencil">Фронтенд</h1>
@@ -77,6 +99,18 @@
         >
       </div>
     </div>
-    <div class="tasks__add-btn icon-plus">Новая задача</div>
+    <button class="tasks__add-task-btn icon-plus">Новая задача</button>
+
+    <div class="tasks-form">
+      <form class="tasks-form__form" action="">
+        <input
+          class="tasks-form__input"
+          type="text"
+          placeholder="Текст задачи"
+        />
+        <button class="tasks-form__add-btn">Добавить задачу</button>
+        <button class="tasks-form__cancel-btn">Отмена</button>
+      </form>
+    </div>
   </div>
 </div>
