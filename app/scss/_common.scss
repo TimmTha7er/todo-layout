@@ -2,11 +2,12 @@
 //		common
 // ----------------------------------------------
 body {
-  font-size: 15px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-family: Roboto, -apple-system, system-ui, sans-serif;
+  color: $text-color;
+  // background-color: #E5E5E5;
   min-width: 320px;
   overflow-x: hidden;
-  color: $text-color;
 }
 
 .hidden {
@@ -38,21 +39,32 @@ body {
 }
 
 .container {
-  max-width: 1170px;
+  max-width: 746px;
   margin: 0 auto;
 
-  @media only screen and (max-width: 1200px) {
-    max-width: 970px;
-  }
-  @media only screen and (max-width: 992px) {
-    max-width: 750px;
-  }
+  // @media only screen and (max-width: 1200px) {
+  //   max-width: 970px;
+  // }
+  // @media only screen and (max-width: 992px) {
+  //   max-width: 750px;
+  // }
   @media only screen and (max-width: 768px) {
-    max-width: 540px;
+    // max-width: 540px;
     padding: 0 15px;
   }
   @media only screen and (max-width: 480px) {
-    max-width: none;
+    // max-width: none;
     padding: 0 5px;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

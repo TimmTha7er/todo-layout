@@ -100,10 +100,18 @@ const exportJS = () => {
 // FONTS
 // TASK, 'gulp convertFonts' to run
 const convertFonts = () => {
-  return src([source_folder + '/fonts/**/*.ttf'])
+  return src([
+    source_folder + '/fonts/**/*.ttf',
+    '!' + source_folder + '/fonts/fontello/**/*',
+  ])
     .pipe(ttf2woff())
     .pipe(dest(source_folder + '/fonts/'))
-    .pipe(src([source_folder + '/fonts/**/*.ttf']))
+    .pipe(
+      src([
+        source_folder + '/fonts/**/*.ttf',
+        '!' + source_folder + '/fonts/fontello/**/*',
+      ])
+    )
     .pipe(ttf2woff2())
     .pipe(dest(source_folder + '/fonts/'));
 };
